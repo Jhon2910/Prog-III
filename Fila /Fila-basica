@@ -1,0 +1,80 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Deque;//adicionar nacabeca
+
+public class fila {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Queue<Integer> carros = new LinkedList<>();
+
+        System.out.println("Digite o tamanho :");
+    
+        int j = sc.nextInt();
+        int v;
+        int vet[] = new int[j];
+
+        for (int i = 0; i < vet.length; i++) {
+            System.out.printf("Digite carro do vetor %d: ", i + 1);
+            while (!sc.hasNextInt()) {
+                System.out.print("Digite um numero inteiro!");
+                System.out.printf("Digite carro do vetor %d: ", i + 1);
+                sc.next();
+            }
+            int valor = sc.nextInt();
+            carros.add(valor);
+        }
+
+       // carros.add(1); //adiciona na cauda / add to the tail
+       // carros.add("ford"); //adiciona na cauda / add to the tail
+       // carros.add("tesla"); //adiciona na cauda / add to the tail
+
+       // System.out.println("topo " + carros.peek()); // mostrar o elemento / show the element
+
+       for(int k = 0;k < vet.length;k++){
+
+        System.out.println("Digite 1 para sim ou qualquer outro numero para não.");
+
+        
+            System.out.println("Deseja retirar o primeiro da fila ? : ");
+            int desejo = sc.nextInt();
+
+            if(desejo == 1){
+            System.out.println("proximo da fila :" + carros.poll());
+            k--;
+            }
+            else{
+                break;
+            }
+        }
+
+        for(int k = 0;k < vet.length;k++){
+
+        System.out.println("Digite 1 para sim ou qualquer outro numero para não.");
+
+        
+            System.out.println("Deseja adicionar no ultimo da fila ? : ");
+            int desejo = sc.nextInt();
+
+            if(desejo == 1){
+                System.out.println("Qual valor? ");
+                v = sc.nextInt();
+                System.out.println("proximo da fila :" + carros.add(v));
+                k++;
+            
+            }
+            else{
+                break;
+            }
+        }
+        
+       // System.out.println("topo " + carros.poll()); // mostrar e retirar o elemento do topo (cabeca) / show and erase the element on the top
+
+        System.out.println(carros);
+        System.out.println(carros.isEmpty()?"vazia / empty":"não vazia / not empty");
+        
+        sc.close();
+    }
+    
+}
