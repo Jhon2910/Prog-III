@@ -7,15 +7,15 @@ public class fila {
         Queue<String> carros = new LinkedList<>();
 
 
-        carros.add("BMW"); //adiciona na cauda
-        carros.add("ford"); //adiciona na cauda
-        carros.add("tesla"); //adiciona na cauda
+        carros.add("BMW"); //adiciona na cauda / add tothe tail
+        carros.add("ford"); //adiciona na cauda / add tothe tail
+        carros.add("tesla"); //adiciona na cauda / add tothe tail
 
-        System.out.println("topo " + carros.peek()); // mostrar o elemento
+        System.out.println("topo " + carros.peek()); // mostrar o elemento / show the element
 
-       System.out.println("topo " + carros.poll()); // mostrar e retirar o elemento do topo (caabeca)
+        System.out.println("topo " + carros.poll()); // mostrar e retirar o elemento do topo (cabeca) / show and erase the element on the top
 
         System.out.println(carros);
-        System.out.println(carros.isEmpty()?"vazia":"com elementos");
+        System.out.println(carros.isEmpty()?"vazia / empty":"não vazia / not empty");
     }
 }
