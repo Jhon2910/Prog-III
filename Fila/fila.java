@@ -6,12 +6,12 @@ public class fila {
 
         Queue<String> carros = new LinkedList<>();
 
-        //adiciona na cauda
-        carros.add("BMW");
-        carros.add("ford");
-        carros.add("tesla");
 
-        // System.out.println("topo " + carros.peek()); // mostrar o elemento
+        carros.add("BMW"); //adiciona na cauda
+        carros.add("ford"); //adiciona na cauda
+        carros.add("tesla"); //adiciona na cauda
+
+        System.out.println("topo " + carros.peek()); // mostrar o elemento
 
        System.out.println("topo " + carros.poll()); // mostrar e retirar o elemento do topo (caabeca)
 
